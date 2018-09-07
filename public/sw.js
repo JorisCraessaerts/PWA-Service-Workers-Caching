@@ -50,6 +50,9 @@ self.addEventListener('fetch', function (event) {
                   cache.put(event.request, res.clone()); // A response can only be used once. Once it's used, it's empty. Storing the response uses it so we have to clone it when we add it to the cache. This way we can return the original response to the user.
                   return res;
                 });
+            })
+            .catch((error) => {
+
             });
         }
       })
